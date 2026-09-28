@@ -1,0 +1,178 @@
+<!doctype html>
+<!-- 해설: 소개 페이지입니다. HTML은 제목·설명·링크·이미지의 구조를, home.css는 외관을 담당합니다. -->
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#faf8f4" /><meta
+      name="description"
+      content="내 방의 치수를 정하고 3D 가구를 배치해 보세요. 모델 파일 가져오기, 가구 직접 만들기, 자유로운 방 윤곽과 가벽 편집을 지원하는 룸 아틀리에."
+    />
+    <title>룸 아틀리에 — 내 방을, 내 방식으로</title>
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23b65b3e'/%3E%3Cpath d='M7 10l9-5 9 5v12l-9 5-9-5zM7 10l9 6 9-6M16 16v11' fill='none' stroke='white' stroke-width='2'/%3E%3C/svg%3E"
+    />
+    <link rel="stylesheet" href="./home.css" />
+  <link rel="manifest" href="./manifest.webmanifest" />
+<link rel="apple-touch-icon" href="./icons/icon-192.png" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-title" content="룸 아틀리에" />
+<link rel="stylesheet" href="./ios.css" />
+</head>
+  <body>
+    <a class="skip" href="#main">본문 바로가기</a>
+    <!-- 해설: 상단 메뉴에서 편집기로 이동합니다. 실제 3D 코드는 editor.html에서 불러옵니다. -->
+    <header class="header wrap">
+      <a class="brand" href="./" aria-label="룸 아틀리에 홈"
+        ><svg class="brand-icon" width="40" height="40" viewBox="0 0 32 32" aria-hidden="true">
+          <rect width="32" height="32" rx="8" fill="currentColor" />
+          <path
+            d="M7 10l9-5 9 5v12l-9 5-9-5zM7 10l9 6 9-6M16 16v11"
+            fill="none"
+            stroke="white"
+            stroke-width="1.6"
+          /></svg
+        ><span>룸 아틀리에<small>ROOM ATELIER</small></span></a
+      >
+      <nav aria-label="주 메뉴"
+        ><a href="#guide">사용 방법</a
+        ><a class="button small" href="./editor.html"
+          >편집기 열기 <span aria-hidden="true">↗</span></a
+        ></nav
+      >
+    </header>
+    <main id="main">
+      <!-- 해설: 서비스 소개와 사용자가 제공한 참고 이미지입니다. 이미지가 자동으로 3D로 변환되는 것은 아닙니다. -->
+      <section class="hero wrap" aria-labelledby="hero-title">
+        <div class="hero-copy"
+          ><p class="eyebrow">나만의 3D 공간 스튜디오</p
+          ><h1 id="hero-title">내 방을,<br /><em>내 방식으로.</em></h1
+          ><p class="intro"
+            >침대는 이쪽, 책상은 창가에.<br />가구를 옮기기 전에, 내 방의 가능성을 펼쳐보세요.</p
+          ><a class="button primary" href="./editor.html"
+            >공간 꾸미기 시작 <span aria-hidden="true">↗</span></a
+          ><p class="hero-note">브라우저에서 바로 · 내 기기에 저장</p></div
+        >
+        <figure class="hero-art"
+          ><img
+            src="./reference.svg"
+            width="740"
+            height="740"
+            alt="침대와 책상, 수납장을 아늑하게 배치한 원룸의 입체 참고 이미지"
+            fetchpriority="high"
+          /><figcaption
+            ><span>SPACE INSPIRATION</span><span>작은 공간을 위한 배치 영감</span></figcaption
+          ></figure
+        >
+      </section>
+      <!-- 해설: 방 윤곽 편집, 3D 파일 가져오기, 도형 제작 기능을 소개합니다. -->
+      <section class="possibilities wrap" aria-label="공간 편집 기능">
+        <article
+          ><span class="number">01 / SPACE</span><h2>네모가 아니어도 괜찮아요</h2
+          ><p
+            >실제 치수를 입력하고, L자형이나 원하는 윤곽을 그려보세요. 문·창이 있는 벽과 가벽도 더할
+            수 있어요.</p
+          ></article
+        >
+        <article
+          ><span class="number">02 / OBJECT</span><h2>내 가구를 그대로 가져와요</h2
+          ><p
+            >GLB, glTF, OBJ, STL 모델을 불러와 실제 크기로 배치하세요. 기본 가구로 가볍게 시작해도
+            좋아요.</p
+          ></article
+        >
+        <article
+          ><span class="number">03 / CREATE</span><h2>없는 가구는 직접 만들어요</h2
+          ><p
+            >상자와 원기둥 같은 도형을 조합해 나만의 가구를 만들고, 완성한 모델을 GLB 파일로
+            저장하세요.</p
+          ></article
+        >
+      </section>
+      <!-- 해설: 처음 방문한 사람을 위한 사용 순서입니다. -->
+      <section class="guide-section" id="guide" aria-labelledby="guide-title"
+        ><div class="guide wrap">
+          <div class="guide-heading"
+            ><p class="eyebrow">처음이라면</p
+            ><h2 id="guide-title">세 단계로 완성하는<br />나의 작은 공간.</h2
+            ><p>큰 화면과 마우스를 사용하면<br />가구를 더 편하게 배치할 수 있어요.</p></div
+          >
+          <ol class="steps">
+            <li
+              ><span>1</span
+              ><div
+                ><h3>방의 크기와 모양 정하기</h3
+                ><p
+                  >편집기의 ‘방 설정’에서 가로·세로·높이를 cm로 입력하세요. ‘윤곽 직접 그리기’로 방
+                  모양도 맞출 수 있어요.</p
+                ></div
+              ></li
+            >
+            <li
+              ><span>2</span
+              ><div
+                ><h3>가구를 놓고 취향 더하기</h3
+                ><p
+                  >가구를 추가한 뒤 끌어서 이동하세요. 선택한 가구의 치수·회전·색상을 바꾸거나,
+                  ‘가구 직접 만들기’를 열어보세요.</p
+                ></div
+              ></li
+            >
+            <li
+              ><span>3</span
+              ><div
+                ><h3>완성한 공간 저장하기</h3
+                ><p
+                  >‘공간 저장’으로 현재 브라우저에 보관하세요. 다른 기기에서 이어 하려면 ‘파일
+                  저장’으로 내보낸 뒤 폴더 버튼으로 열면 돼요.</p
+                ></div
+              ></li
+            >
+          </ol>
+        </div></section
+      >
+      <!-- 해설: details/summary는 JavaScript 없이 접고 펼칠 수 있는 HTML 요소입니다. -->
+      <section class="questions wrap" aria-labelledby="questions-title"
+        ><h2 id="questions-title">시작하기 전에</h2
+        ><div class="answers">
+          <details
+            ><summary>어떤 3D 파일을 준비하면 되나요?</summary
+            ><p
+              >형태와 재질이 한 파일에 들어 있는 GLB를 권장해요. glTF는 BIN·이미지를, OBJ는
+              MTL·이미지를 함께 선택해 주세요. 파일 전체 크기는 25MB까지이며, 모델을 불러온 뒤 실제
+              치수를 확인해 주세요.</p
+            ></details
+          >
+          <details
+            ><summary>제가 만든 방은 어디에 저장되나요?</summary
+            ><p
+              >‘공간 저장’을 누르면 방과 가져온 모델이 사용 중인 기기의 브라우저에 저장돼요. 다른
+              사람에게 자동으로 공유되거나 다른 기기와 동기화되지는 않아요. 브라우저 데이터를 지우기
+              전에는 ‘파일 저장’으로 백업해 주세요.</p
+            ></details
+          >
+          <details
+            ><summary>사진만으로 가구를 만들 수도 있나요?</summary
+            ><p
+              >사진을 자동으로 3D 모델로 바꾸는 기능은 제공하지 않아요. 이미 만들어진 3D 파일을
+              가져오거나, ‘가구 직접 만들기’에서 기본 도형을 조합할 수 있어요. 기존 라이브러리의
+              가구도 치수로 생성한 기본 모델이에요.</p
+            ></details
+          >
+          <details
+            ><summary>실제 가구 배치에도 활용할 수 있나요?</summary
+            ><p
+              >입력한 치수는 3D 공간에 비율대로 반영돼요. 다만 가구끼리 겹치는 배치는 허용하므로,
+              실제 설치 전에는 가구의 크기와 문 여는 공간, 통로를 직접 확인해 주세요.</p
+            ></details
+          >
+        </div></section
+      >
+    </main>
+    <footer class="footer wrap"
+      ><span>룸 아틀리에 <small>ROOM ATELIER</small></span
+      ><a href="./editor.html">내 공간 꾸미러 가기 <span aria-hidden="true">↗</span></a></footer
+    >
+  </body>
+</html>

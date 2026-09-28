@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "room": {"w":570,"d":420,"h":280,"wall":"#e4e2db","floor":"#f8f7f7","shape":"rectangle","notchW":140,"notchD":140},
+  "objects": [
+    {"id":"item-1","type":"bed","name":"포근한 싱글 침대","w":110,"d":205,"h":75,"x":-230,"y":0,"z":108,"rotation":0,"color":"#e7dec9","feature":"standard"},
+    {"id":"item-2","type":"desk","name":"오크 워크 데스크","w":150,"d":65,"h":75,"x":98,"y":0,"z":-124,"rotation":0,"color":"#c5a580","feature":"standard"},
+    {"id":"item-3","type":"chair","name":"라운드 데스크 체어","w":58,"d":60,"h":90,"x":97,"y":0,"z":-25,"rotation":0,"color":"#878e81","feature":"standard"},
+    {"id":"item-4","type":"wardrobe","name":"슬림 수납장","w":75,"d":60,"h":235,"x":-149,"y":0,"z":-145,"rotation":0,"color":"#e0dfd5","feature":"standard"},
+    {"id":"item-5","type":"shelf","name":"오픈 우드 책장","w":95,"d":30,"h":200,"x":-45,"y":0,"z":-161,"rotation":0,"color":"#b49673","feature":"standard"},
+    {"id":"item-6","type":"plant","name":"초록 한 조각","w":45,"d":45,"h":120,"x":160,"y":0,"z":105,"rotation":0,"color":"#6b7955","feature":"standard"},
+    {"id":"item-7","type":"rug","name":"내추럴 울 러그","w":160,"d":130,"h":2,"x":50,"y":0,"z":65,"rotation":0,"color":"#d0c3a7","feature":"standard"}
+  ],
+  "assets": {}
+}

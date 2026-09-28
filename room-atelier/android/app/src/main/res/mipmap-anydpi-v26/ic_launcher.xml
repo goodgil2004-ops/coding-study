@@ -1,0 +1,2 @@
+<!-- 해설: 홈 화면 아이콘의 배경과 전경을 조합합니다. -->
+<adaptive-icon xmlns:android="http://schemas.android.com/apk/res/android"><background android:drawable="@color/icon_background"/><foreground android:drawable="@drawable/ic_foreground"/></adaptive-icon>

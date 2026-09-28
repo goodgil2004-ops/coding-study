@@ -1,0 +1,2 @@
+<!-- 해설: 큐브 윤곽을 좌표 경로로 그린 벡터 아이콘입니다. PNG 이미지 생성이 필요하지 않습니다. -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android" android:width="108dp" android:height="108dp" android:viewportWidth="108" android:viewportHeight="108"><path android:pathData="M29,38 L54,24 L79,38 L79,70 L54,84 L29,70 Z M29,38 L54,53 L79,38 M54,53 L54,84" android:fillColor="#00000000" android:strokeColor="#FFFFFF" android:strokeWidth="4" android:strokeLineJoin="round" android:strokeLineCap="round"/></vector>

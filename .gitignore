@@ -1,0 +1,26 @@
+# Dependencies and temporary files
+node_modules/
+__pycache__/
+*.py[cod]
+.DS_Store
+Thumbs.db
+
+# Local secrets and signing material
+.env
+.env.*
+!.env.example
+.signing/
+*.pem
+*.key
+*.jks
+*.keystore
+*.p12
+*.pfx
+local.properties
+
+# Build outputs
+build/
+.gradle/
+*.apk
+*.aab
+*.idsig

@@ -1,0 +1,80 @@
+/* Touch targets and the file picker remain reachable on a phone. */
+/* 해설: Android의 작은 화면에서 터치 버튼 크기를 확보하고 파일 열기 버튼이 보이도록 조절합니다. */
+@media (max-width: 600px) {
+  .header-actions #import-project {
+    display: inline-flex;
+  }
+  .header-actions .icon-button,
+  .stage-top .icon-button,
+  .view-controls .icon-button {
+    min-width: 40px;
+    min-height: 40px;
+  }
+  .app-header {
+    padding: 0 10px;
+    gap: 8px;
+  }
+  .brand {
+    font-size: 15px;
+    gap: 6px;
+  }
+  .brand-icon {
+    width: 28px;
+    height: 32px;
+  }
+  .header-actions .button {
+    min-height: 40px;
+  }
+  .header-actions #save {
+    padding: 8px 10px;
+  }
+  .view-switch button {
+    min-height: 36px;
+    padding: 7px 12px;
+  }
+  .stage-top {
+    left: 12px;
+    right: 12px;
+  }
+  .stage-top .stage-actions {
+    gap: 0;
+  }
+  .stage-top .separator {
+    margin: 0 2px;
+  }
+  .scene-label {
+    top: 91px;
+  }
+  .stage-bottom .interaction-tip {
+    font-size: 11px;
+    letter-spacing: 0;
+  }
+  input,
+  select {
+    font-size: 16px !important;
+  }
+  .catalog {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  #toast {
+    white-space: normal;
+    min-width: 200px;
+  }
+}
+
+body { padding-left: env(safe-area-inset-left); padding-right: env(safe-area-inset-right); padding-bottom: env(safe-area-inset-bottom); }
+.app-header { height: auto; min-height: 68px; padding-top: max(10px, env(safe-area-inset-top)); padding-bottom: 10px; }
+#viewport, canvas { -webkit-user-select: none; user-select: none; }
+.file-save-dialog { width: min(90vw, 380px); border: 1px solid #e5e5dd; border-radius: 18px; padding: 24px; color: #30362f; background: #fbfaf7; }
+.file-save-dialog::backdrop { background: #0008; }
+.file-save-dialog h2 { margin-top: 0; font-size: 20px; }
+.file-save-dialog p { overflow-wrap: anywhere; line-height: 1.6; }
+.file-save-dialog button, .file-save-dialog a { display: block; width: 100%; box-sizing: border-box; padding: 14px; margin-top: 10px; border-radius: 10px; border: 1px solid #ddd; text-align: center; font-size: 16px; text-decoration: none; color: inherit; background: white; }
+@media (max-width: 600px) {
+ .header-actions .icon-button, .stage-top .icon-button, .view-controls .icon-button { min-width: 44px; min-height: 44px; }
+ .app-header { flex-wrap: wrap; }
+ .stage { min-height: 360px; }
+}
+
+.category-tabs { overflow-x: auto; flex-wrap: nowrap; }
+.category-tabs button { flex-shrink: 0; }

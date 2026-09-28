@@ -1,0 +1,529 @@
+500;600;700&family=Noto+Sans+KR:wght@400;500;600;700;800&display=swap");
+/* 해설: 공통 글꼴과 테마 색상 변수입니다. --accent를 바꾸면 주요 버튼과 강조 색이 바뀝니다. */
+:root {
+  font-family: "DM Sans", "Noto Sans KR", sans-serif;
+  color: #30362f;
+  background: #faf8f4;
+  --accent: #ad5137;
+  --muted: #687063;
+  --line: #dedfd5;
+  font-synthesis: none;
+  scroll-behavior: smooth;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.7;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+a:focus-visible,
+summary:focus-visible {
+  outline: 3px solid #ad5137;
+  outline-offset: 6px;
+}
+a,
+summary {
+  -webkit-tap-highlight-color: transparent;
+}
+::selection {
+  background: #e8c9b8;
+}
+.wrap {
+  width: min(1240px, calc(100% - 96px));
+  margin-inline: auto;
+}
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding-block: 27px;
+  border-bottom: 1px solid var(--line);
+}
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 21px;
+  font-weight: 800;
+  letter-spacing: -0.6px;
+  line-height: 1.4;
+}
+.brand-icon {
+  color: var(--accent);
+  flex-shrink: 0;
+}
+.brand small {
+  display: block;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 2px;
+  color: var(--muted);
+  margin-top: 3px;
+}
+.header nav {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  font-size: 14px;
+}
+.header nav > a:first-child:hover {
+  color: var(--accent);
+}
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 28px;
+  padding: 16px 24px;
+  border: 1px solid #c9ccbf;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: 500;
+  transition:
+    background 0.15s,
+    color 0.15s;
+}
+.button:hover {
+  background: #eeeee5;
+}
+.button.small {
+  padding: 10px 18px;
+  font-size: 14px;
+  gap: 20px;
+}
+.button.primary {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: white;
+  min-width: 232px;
+}
+.button.primary:hover {
+  background: #913f28;
+}
+.button span {
+  font-size: 22px;
+  line-height: 1;
+} /* 해설: 넓은 화면에서 소개 문구와 참고 이미지를 두 열로 배치합니다. */
+.hero {
+  display: grid;
+  grid-template-columns: 1fr 1.06fr;
+  gap: 64px;
+  align-items: center;
+  padding-block: 60px 72px;
+}
+.eyebrow {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--accent);
+  letter-spacing: 0.6px;
+  margin: 0 0 20px;
+}
+h1 {
+  font-size: clamp(44px, 5.2vw, 72px);
+  line-height: 1.25;
+  letter-spacing: -3px;
+  font-weight: 600;
+  margin: 0 0 28px;
+  word-break: keep-all;
+}
+h1 em {
+  font-style: normal;
+  color: var(--accent);
+}
+.intro {
+  color: var(--muted);
+  font-size: 17px;
+  line-height: 1.9;
+  margin: 0 0 32px;
+  word-break: keep-all;
+}
+.hero-note {
+  font-size: 13px;
+  color: var(--muted);
+  margin: 14px 0 0;
+}
+.hero-art {
+  margin: 0;
+  background: #dfccc2;
+  border-radius: 120px 7px 7px 7px;
+  overflow: hidden;
+}
+.hero-art img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1;
+  object-fit: cover;
+}
+.hero-art figcaption {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  align-items: center;
+  padding: 16px 22px;
+  background: #e8dacf;
+  color: #65594d;
+  font-size: 12px;
+}
+.hero-art figcaption span:first-child {
+  font-size: 12px;
+  letter-spacing: 1.4px;
+} /* 해설: 기능 소개 카드의 격자 배치입니다. */
+.possibilities {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 48px;
+  padding-block: 36px 68px;
+  border-top: 1px solid var(--line);
+}
+.number {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 1.2px;
+  color: var(--accent);
+}
+h2,
+h3 {
+  word-break: keep-all;
+}
+.possibilities h2 {
+  font-size: 21px;
+  font-weight: 600;
+  letter-spacing: -0.6px;
+  margin: 18px 0 12px;
+}
+.possibilities p {
+  font-size: 16px;
+  color: var(--muted);
+  line-height: 1.9;
+  margin: 0;
+  word-break: keep-all;
+} /* 해설: 사용 방법 영역의 배경과 간격입니다. */
+.guide-section {
+  background: #eeeee5;
+  border-block: 1px solid #e2e3d8;
+  scroll-margin-top: 20px;
+}
+.guide {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  gap: 80px;
+  padding-block: 64px;
+}
+.guide h2 {
+  font-size: 34px;
+  font-weight: 600;
+  line-height: 1.5;
+  letter-spacing: -1.5px;
+  margin: 0 0 22px;
+}
+.guide-heading > p:last-child {
+  color: var(--muted);
+  font-size: 15px;
+}
+.steps {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.steps li {
+  display: flex;
+  gap: 24px;
+  padding-block: 25px;
+  border-top: 1px solid #d3d7c8;
+}
+.steps li:first-child {
+  border: 0;
+  padding-top: 0;
+}
+.steps li:last-child {
+  padding-bottom: 0;
+}
+.steps li > span {
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  width: 34px;
+  height: 34px;
+  border: 1px solid #b3bba7;
+  border-radius: 50%;
+  font-size: 15px;
+  color: #566349;
+  margin-top: 4px;
+}
+.steps h3 {
+  font-size: 20px;
+  font-weight: 600;
+  margin: 0 0 8px;
+  letter-spacing: -0.5px;
+}
+.steps p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 16px;
+  line-height: 1.9;
+  word-break: keep-all;
+}
+.questions {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  gap: 80px;
+  padding-block: 64px 76px;
+}
+.questions h2 {
+  font-size: 28px;
+  letter-spacing: -1px;
+  font-weight: 600;
+  margin: 4px 0;
+}
+.answers details {
+  border-bottom: 1px solid var(--line);
+}
+.answers summary {
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 20px 0;
+  font-size: 17px;
+  font-weight: 500;
+  word-break: keep-all;
+}
+.answers details:first-child summary {
+  padding-top: 8px;
+}
+.answers summary::-webkit-details-marker {
+  display: none;
+}
+.answers summary:after {
+  content: "+";
+  font-size: 22px;
+  font-weight: 400;
+  color: var(--accent);
+}
+.answers details[open] summary:after {
+  content: "−";
+}
+.answers p {
+  font-size: 16px;
+  margin: 0 0 22px;
+  color: var(--muted);
+  line-height: 1.9;
+  word-break: keep-all;
+}
+.footer {
+  border-top: 1px solid var(--line);
+  padding-block: 28px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+  font-size: 15px;
+}
+.footer > span {
+  font-weight: 600;
+}
+.footer small {
+  font-size: 12px;
+  letter-spacing: 1px;
+  font-weight: 400;
+  color: var(--muted);
+  margin-left: 12px;
+}
+.footer a {
+  font-size: 14px;
+  color: var(--accent);
+}
+.skip {
+  position: fixed;
+  top: -100px;
+  left: 20px;
+  background: white;
+  color: var(--accent);
+  padding: 10px 18px;
+  z-index: 10;
+}
+.skip:focus {
+  top: 10px;
+}
+@media (min-width: 1600px) {
+  .hero {
+    gap: 100px;
+    padding-block: 72px;
+  }
+  .hero-art {
+    max-width: 570px;
+  }
+  .hero-copy {
+    padding-left: 16px;
+  }
+}
+@media (max-width: 1000px) {
+  .wrap {
+    width: calc(100% - 56px);
+  }
+  .hero {
+    gap: 32px;
+    padding-block: 46px 54px;
+  }
+  .hero-art {
+    border-top-left-radius: 80px;
+  }
+  .hero-art figcaption {
+    padding: 14px 16px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2px;
+  }
+  .possibilities {
+    gap: 28px;
+  }
+  .possibilities h2 {
+    font-size: 19px;
+  }
+  .guide,
+  .questions {
+    gap: 40px;
+    grid-template-columns: 0.9fr 1.3fr;
+  }
+  .guide h2 {
+    font-size: 28px;
+  }
+  .intro br {
+    display: none;
+  }
+}
+/* 해설: 모바일에서는 한 열로 바꿔 좁은 화면에서도 읽을 수 있게 합니다. */
+@media (max-width: 720px) {
+  .wrap {
+    width: calc(100% - 40px);
+  }
+  .header {
+    padding-block: 19px;
+    gap: 14px;
+  }
+  .brand {
+    font-size: 18px;
+    gap: 9px;
+  }
+  .brand-icon {
+    width: 34px;
+    height: 34px;
+  }
+  .brand small {
+    font-size: 12px;
+    letter-spacing: 1px;
+  }
+  .header nav {
+    gap: 0;
+  }
+  .header nav > a:first-child {
+    display: none;
+  }
+  .button.small {
+    font-size: 14px;
+    padding: 9px 12px;
+    gap: 12px;
+  }
+  .hero {
+    grid-template-columns: 1fr;
+    gap: 36px;
+    padding-block: 40px;
+  }
+  .hero h1 {
+    font-size: 52px;
+    letter-spacing: -2px;
+  }
+  .eyebrow {
+    margin-bottom: 16px;
+  }
+  .intro {
+    font-size: 16px;
+    margin-bottom: 24px;
+  }
+  .hero-art {
+    border-top-left-radius: 84px;
+    max-width: 520px;
+    width: 100%;
+    justify-self: center;
+  }
+  .hero-art figcaption {
+    flex-direction: row;
+    align-items: center;
+    padding: 13px 16px;
+    font-size: 12px;
+  }
+  .hero-art figcaption span:first-child {
+    font-size: 12px;
+    letter-spacing: 0.3px;
+  }
+  .possibilities {
+    grid-template-columns: 1fr;
+    gap: 28px;
+    padding-block: 30px 40px;
+  }
+  .possibilities article + article {
+    border-top: 1px solid var(--line);
+    padding-top: 26px;
+  }
+  .possibilities h2 {
+    font-size: 21px;
+    margin-block: 10px;
+  }
+  .guide,
+  .questions {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    padding-block: 40px;
+  }
+  .guide h2 {
+    font-size: 30px;
+  }
+  .guide-heading > p:last-child br {
+    display: none;
+  }
+  .steps li {
+    gap: 16px;
+  }
+  .steps h3 {
+    font-size: 18px;
+  }
+  .questions h2 {
+    font-size: 25px;
+  }
+  .answers summary {
+    font-size: 16px;
+  }
+  .footer {
+    align-items: flex-start;
+    padding-block: 24px;
+  }
+  .footer small {
+    display: block;
+    margin: 3px 0 0;
+  }
+  .footer a {
+    font-size: 14px;
+  }
+  .hero .button {
+    min-width: 240px;
+  }
+}
+/* 해설: 동작 줄이기 설정을 사용한 방문자에게 부드러운 스크롤과 전환 효과를 줄입니다. */
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    scroll-behavior: auto;
+  }
+  .button {
+    transition: none;
+  }
+}
